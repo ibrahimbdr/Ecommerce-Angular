@@ -41,6 +41,7 @@ import { Tooltip } from 'chart.js';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
+     
 
   ],
   imports: [

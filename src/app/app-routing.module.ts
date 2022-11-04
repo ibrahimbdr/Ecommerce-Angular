@@ -15,7 +15,8 @@ const routes: Routes = [
     {path: 'products', component: ProductsComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent}
-  ]}
+   ]},
+  { path: 'info', loadChildren: () => import('./modules/lazyloading/lazyloading.module').then(m => m.LazyloadingModule) }
 
 ];
 
