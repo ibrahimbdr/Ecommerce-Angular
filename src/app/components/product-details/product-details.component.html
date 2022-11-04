@@ -8,14 +8,15 @@
         </ol>
       </nav>
       <button class="btn btn-primary" (click)="navigateBack()">Go Back</button>
-    <div class="container">
+    <div class="container mt-3">
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 
-						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img [src]="product?.image" /></div>
+						<div class="preview-pic tab-content text-center p-3">
+						  <div class="tab-pane active" id="pic-1"><img [src]="product?.image" width="500"
+                height="550" /></div>
 
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
