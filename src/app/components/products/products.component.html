@@ -11,7 +11,6 @@
           mdbCollapse
           #basicNavbar="mdbCollapse"
         >
-
           <!-- Search form -->
           <form class="d-flex input-group w-100">
             <input
@@ -35,141 +34,249 @@
     <div class="col-12 col-md-10 p-0">
       <!-- Navbar -->
 
-<!-- Navbar -->
-<div class="container-fluid p-0 d-flex flex-wrap justify-content-center">
-  <!-- <ng-container *ngFor="let product of productList; let i = index">
-    <div class="card m-2" style="width: 20rem;">
-      <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-        <img [src]="product.image" class="img-fluid"/>
-        <a href="#!">
-          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-        </a>
+      <!-- Navbar -->
+      <div class="container-fluid p-0 d-flex flex-wrap justify-content-center">
+        <!--  -->
+        <ng-container *ngFor="let product of productList; let i = index">
+          <div class="card m-2" style="width: 20rem">
+            <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+              <img
+                [src]="product.image"
+                class="img-fluid align-items-center"
+                width="150"
+                height="100"
+              />
+              <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.15)"
+                ></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ product.title }}</h5>
+              <p class="card-text">
+                {{ product.price | currency: "USD":"symbol" }}
+              </p>
+              <p class="card-text">{{ product.quantity }}</p>
+              <p class="card-text">{{ product.description }}</p>
+              <a href="#!" class="btn btn-primary">Add To Cart</a>
+
+              <button
+                class="btn btn-primary ms-2"
+                (click)="viewDatalis(product.id)"
+                style="width: 100"
+              >
+                view details
+              </button>
+            </div>
+          </div>
+        </ng-container>
+        <!--  -->
+        <!-- <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 20rem">
+          <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+        
       </div>
-      <div class="card-body">
-        <h5 class="card-title">{{product.title}}</h5>
-        <p class="card-text">{{product.price}}</p>
-        <a href="#!" class="btn btn-primary">Add To Cart</a>
+    </div>
+  </div>
+</div> -->
       </div>
-    </div>
-  </ng-container> -->
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div>
-  <div class="card m-2" style="width: 20rem;">
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#!" class="btn btn-primary">Button</a>
-    </div>
-  </div> -->
-</div>
     </div>
   </div>
 </div>

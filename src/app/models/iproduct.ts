@@ -1,5 +1,5 @@
 export interface IProduct {
-  id: string;
+  id: number;
   title: string;
   price: number;
   quantity: number;
@@ -9,6 +9,6 @@ export interface IProduct {
   rating?: {
     rate?: number;
     count?: number;
-  }
+  };
   seller: string;
 }
