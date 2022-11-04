@@ -29,6 +29,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Tooltip } from 'chart.js';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { Tooltip } from 'chart.js';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
-
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,10 +65,9 @@ import { Tooltip } from 'chart.js';
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-
-
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
