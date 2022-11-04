@@ -21,17 +21,17 @@ export class ProductDetailsComponent implements OnInit {
     private router:Router, private productServices:ApiService, private location:Location ) {}
 
   ngOnInit(): void {
-    this.proudctId=this.productServices.getAllProducts();
+    this.proudctId=this.productServices.getProductId();
     this.activeRoute.paramMap.subscribe(paramMap =>
       {this.currentId=paramMap.get("id")?Number(paramMap.get("id")):0;
-      const matched=this.productServices.getProductId(this.currentId)
+      const matched=this.productServices.getProductById(this.currentId)
       if( matched){
-        this.product=matched
+        this.product =matched
 
       }else{
         this.location.back();
       }
-    
+
     })
   }
 

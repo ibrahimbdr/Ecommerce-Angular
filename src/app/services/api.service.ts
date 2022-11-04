@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ApiService {
   productList: IProduct[] = [];
-
+  productIds: number[] = [];
   private httpOptions = {};
   constructor(private hClient: HttpClient) {
     this.productList = [
@@ -125,6 +125,17 @@ export class ApiService {
   //
   getAllProducts(): IProduct[] {
     return this.productList;
+  }
+
+  getProductId(): number[] {
+    this.productList.forEach(prod => {
+      this.productIds.push(prod.id);
+    })
+    return this.productIds;
+  }
+
+  getProductById(id: number): IProduct | undefined{
+    return this.productList.find((p => p.id == id));
   }
 
   // getProducts(): Observable<IProduct[]> {

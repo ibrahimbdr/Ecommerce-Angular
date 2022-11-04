@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/models/iproduct';
 import { ApiService } from 'src/app/services/api.service';
 import { Location } from '@angular/common';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-product-form',
