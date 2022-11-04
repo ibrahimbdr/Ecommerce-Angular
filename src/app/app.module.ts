@@ -29,6 +29,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Tooltip } from 'chart.js';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { Tooltip } from 'chart.js';
     ProductsComponent,
     LoginComponent,
     RegisterComponent,
+    ProductDetailsComponent,
 
   ],
   imports: [

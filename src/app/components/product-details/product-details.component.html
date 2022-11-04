@@ -1,0 +1,96 @@
+<!-- <p>product-details works!</p> -->
+<div class="container-fluid p-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/products">Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{product?.name}}</li>
+        </ol>
+      </nav>
+      <button class="btn btn-primary" (click)="navigateBack()">Go Back</button>
+    <div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img [src]="product?.img" /></div>
+
+						</div>
+						<ul class="preview-thumbnail nav nav-tabs">
+
+						</ul>
+
+					</div>
+					<div class="details col-md-6">
+						<h3 class="product-title">{{product?.name}}</h3>
+						<div class="rating">
+              <div class="stars" *ngIf="product?.rating == 0">
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<div class="stars" *ngIf="product?.rating == 1">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+              <div class="stars" *ngIf="product?.rating == 2">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+              <div class="stars" *ngIf="product?.rating == 3">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+              <div class="stars" *ngIf="product?.rating == 4">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+              <div class="stars" *ngIf="product?.rating == 5">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+							</div>
+							<span class="review-no">{{product?.reviews}} reviews</span>
+						</div>
+						<p class="product-description">{{product?.description}}</p>
+						<h4 class="price">current price: <span class="text-primary">{{product?.price | EGPUSD | currency: 'USD' : 'symbol'}}</span></h4>
+						<p class="vote"><strong *ngIf="product!.likes!=0">{{product?.likes}}% of buyers enjoyed this product! </strong><strong>({{product?.vote}} votes)</strong></p>
+						<div class="colors">
+              <h5 class="color fw-bold" title="Qty">Qty </h5>
+							<h5 class="color text-primary fw-bold" title="Qty">{{product?.quantity}}</h5>
+            </div>
+						<div class="action">
+							<button class="add-to-cart btn btn-default btn-primary me-2" type="button">add to cart</button>
+							<button class="like btn btn-default btn-primary" type="button"><span class="fa fa-heart"></span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="nxtPrevBtns d-flex justify-content-center mt-2">
+    <button type="button" class="btn btn-primary me-1" (click)="getPrevProduct()" [disabled]="currentId==ProductIdLs[0]"><span class="fa fa-chevron-left"></span></button>
+
+    <button type="button" class="btn btn-primary ms-1" (click)="getNxtProduct()" [disabled]="currentId==ProductIdLs[ProductIdLs.length-1]"><span class="fa fa-chevron-right"></span></button>
+  </div>
+</div>
+
+
